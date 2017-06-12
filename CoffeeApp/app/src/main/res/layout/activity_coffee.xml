@@ -1,0 +1,111 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.vidit.coffeeapp.Coffee">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background_1"
+        android:scaleType="centerCrop"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:src="@drawable/coffee_cup_3"
+        android:layout_margin="20dp"
+        android:id="@+id/cup_image_view"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fresh Brew"
+        android:textColor="@android:color/holo_red_dark"
+        android:fontFamily="sans-serif"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_toRightOf="@id/cup_image_view"
+        android:layout_marginTop="40dp"/>
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A kickstart to a great new day!!!"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/cup_image_view"
+        android:textSize="25sp"
+        android:textStyle="italic|bold"
+        android:id="@+id/heading_text_view"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/time"
+        android:layout_below="@id/heading_text_view"
+        android:layout_margin="30dp"
+        android:id="@+id/time_image_view"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/time_image_view"
+        android:layout_below="@id/heading_text_view"
+        android:layout_marginTop="30dp"
+        android:text="8am-10pm"
+        android:textSize="25sp"
+        android:textStyle="bold|italic"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/location"
+        android:layout_below="@id/time_image_view"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/location_image_view"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/time_image_view"
+        android:layout_below="@id/time_image_view"
+        android:text="6765 SW Nyberg Street, Tualatin, OR 97062"
+        android:textSize="25sp"
+        android:textStyle="bold|italic"
+        android:id="@+id/location_text_view"/>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/contact"
+        android:layout_below="@id/location_image_view"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="25dp"
+        android:id="@+id/contact_image_view"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/contact_image_view"
+        android:layout_below="@id/location_text_view"
+        android:text="(857)-701-5563"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="25dp"
+        android:textSize="25sp"
+        android:textStyle="bold|italic"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Our cafe offers wide variety of coffee made with freshly plucked coffee beans from the farms. Come take a break and enjoy your conversations over a cup of coffee."
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/contact_image_view"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"/>
+
+</RelativeLayout>

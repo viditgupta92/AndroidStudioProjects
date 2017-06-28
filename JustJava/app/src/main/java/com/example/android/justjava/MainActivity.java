@@ -11,7 +11,10 @@ package com.example.android.justjava;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
 
 /**
@@ -31,9 +34,16 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        String greet = "Thank you!";
-        int price = calculatePrice(quantity, 5);
-        displayMessage(createOrderSummary(price));
+        EditText text = (EditText) findViewById(R.id.search);
+        String str = text.getText().toString();
+        Log.v("name: ", str);
+        boolean whipped_cream_check, chocolate_check;
+        CheckBox whipped_cream = (CheckBox) findViewById(R.id.checkbox_whipped_cream_view);
+        CheckBox chocolate = (CheckBox) findViewById(R.id.checkbox_chocolate_view);
+        whipped_cream_check = whipped_cream.isChecked();
+        chocolate_check = chocolate.isChecked();
+        int price = calculatePrice(quantity, whipped_cream_check, chocolate_check);
+        displayMessage(createOrderSummary(str, price, whipped_cream_check, chocolate_check));
     }
 
     /**
@@ -48,7 +58,9 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the plus button is clicked.
      */
     public void increment(View view){
-        quantity = quantity + 1;
+        if(quantity < 100) {
+            quantity = quantity + 1;
+        }
         displayQuantity(quantity);
     }
 
@@ -56,7 +68,9 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the minus button is clicked.
      */
     public void decrement(View view){
-        quantity = quantity - 1;
+        if(quantity > 0) {
+            quantity = quantity - 1;
+        }
         displayQuantity(quantity);
     }
 
@@ -73,7 +87,16 @@ public class MainActivity extends AppCompatActivity {
      *
      * @param quantity is the number of cups of coffee ordered
      */
-    private int calculatePrice(int quantity, int cost) {
+    private int calculatePrice(boolean add_whipped_cream, boolean add_chocolate, int quantity) {
+        int cost = 5;
+        if(add_whipped_cream)
+        {
+            cost += 1;
+        }
+        if(add_chocolate)
+        {
+            cost += 2;
+        }
         return quantity * cost;
     }
 
@@ -84,8 +107,8 @@ public class MainActivity extends AppCompatActivity {
      * @return summary
      */
 
-    private String createOrderSummary(int price)
+    private String createOrderSummary(String name, int price, boolean whipped_cream, boolean chocolate)
     {
-        return "Name: Kaptain Kunal\nQuantity: " + quantity + "\nTotal: $" + price + "\nThank you!";
+        return "Name: " + name + "\nAdd whipped cream? " + whipped_cream + "\nAdd chocolate? " + chocolate + "\nQuantity: " + quantity + "\nTotal: $" + price + "\nThank you!";
     }
 }

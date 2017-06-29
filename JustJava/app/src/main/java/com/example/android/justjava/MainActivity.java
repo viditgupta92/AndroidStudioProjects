@@ -1,4 +1,3 @@
-
 /**
  * IMPORTANT: Add your package below. Package name can be found in the project's AndroidManifest.xml file.
  * This is the package name our example uses:
@@ -9,6 +8,8 @@
 
 package com.example.android.justjava;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -16,13 +17,14 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * This app displays an order form to order coffee.
  */
 public class MainActivity extends AppCompatActivity {
 
-    int quantity = 2;
+    int quantity = 99;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +44,16 @@ public class MainActivity extends AppCompatActivity {
         CheckBox chocolate = (CheckBox) findViewById(R.id.checkbox_chocolate_view);
         whipped_cream_check = whipped_cream.isChecked();
         chocolate_check = chocolate.isChecked();
-        int price = calculatePrice(quantity, whipped_cream_check, chocolate_check);
-        displayMessage(createOrderSummary(str, price, whipped_cream_check, chocolate_check));
+        int price = calculatePrice(whipped_cream_check, chocolate_check, quantity);
+//        displayMessage(createOrderSummary(str, price, whipped_cream_check, chocolate_check));
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:")); // only email apps should handle this
+        intent.putExtra(Intent.EXTRA_EMAIL, ("vidit92.gupta@gmail.com"));
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Order Summary");
+        intent.putExtra(Intent.EXTRA_TEXT, createOrderSummary(str, price, whipped_cream_check, chocolate_check));
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
     }
 
     /**
@@ -58,9 +68,11 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the plus button is clicked.
      */
     public void increment(View view){
-        if(quantity < 100) {
-            quantity = quantity + 1;
+        if(quantity == 100) {
+            Toast.makeText(this, "Number of cups of coffee cannot exceed 100", Toast.LENGTH_SHORT).show();
+            return;
         }
+        quantity = quantity + 1;
         displayQuantity(quantity);
     }
 
@@ -68,9 +80,11 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the minus button is clicked.
      */
     public void decrement(View view){
-        if(quantity > 0) {
-            quantity = quantity - 1;
+        if(quantity == 1) {
+            Toast.makeText(this, "Number of cups of coffee cannot decrease below 1", Toast.LENGTH_SHORT).show();
+            return;
         }
+        quantity = quantity - 1;
         displayQuantity(quantity);
     }
 
@@ -110,5 +124,16 @@ public class MainActivity extends AppCompatActivity {
     private String createOrderSummary(String name, int price, boolean whipped_cream, boolean chocolate)
     {
         return "Name: " + name + "\nAdd whipped cream? " + whipped_cream + "\nAdd chocolate? " + chocolate + "\nQuantity: " + quantity + "\nTotal: $" + price + "\nThank you!";
+
+    }
+
+    public void composeEmail(String[] addresses, String subject) {
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:")); // only email apps should handle this
+        intent.putExtra(Intent.EXTRA_EMAIL, addresses);
+        intent.putExtra(Intent.EXTRA_SUBJECT, subject);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
     }
 }

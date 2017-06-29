@@ -13,9 +13,11 @@
         tools:context="com.example.android.justjava.MainActivity">
 
         <EditText
+
             android:id="@+id/search"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="16dp"
             android:hint="Name"
             android:inputType="textCapWords" />
 
@@ -30,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:paddingLeft="24dp"
-            android:text="Whipped Cream"
+            android:text="@string/whipped_cream"
             android:textSize="16sp" />
 
         <CheckBox
@@ -39,13 +41,13 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:paddingLeft="24dp"
-            android:text="Chocolate"
+            android:text="@string/chocolate"
             android:textSize="16sp" />
 
         <TextView
             style="@style/HeaderTextStyle"
             android:layout_margin="16dp"
-            android:text="QUANTITY" />
+            android:text="@string/quantity" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -65,7 +67,7 @@
                 android:id="@+id/quantity_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="99"
+                android:text="2"
                 android:textColor="@android:color/black"
                 android:textSize="16sp" />
 
@@ -81,7 +83,7 @@
         <TextView
             style="@style/HeaderTextStyle"
             android:layout_margin="16dp"
-            android:text="Order Summary"
+            android:text="@string/order_summary"
             android:textAllCaps="true" />
 
         <TextView
@@ -89,7 +91,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:text="$495"
+            android:text="10"
             android:textColor="@android:color/black"
             android:textSize="16sp" />
 
@@ -98,7 +100,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:onClick="submitOrder"
-            android:text="ORDER" />
+            android:text="@string/order" />
 
 
 

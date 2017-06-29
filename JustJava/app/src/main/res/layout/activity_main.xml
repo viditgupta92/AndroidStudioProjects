@@ -22,7 +22,7 @@
         <TextView
             style="@style/HeaderTextStyle"
             android:layout_margin="16dp"
-            android:text="TOPPINGS" />
+            android:text="@string/toppings" />
 
         <CheckBox
             android:id="@+id/checkbox_whipped_cream_view"

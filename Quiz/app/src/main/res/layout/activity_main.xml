@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        tools:context="com.example.android.quiz.MainActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Animals" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/category_animals_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:text="1. Which animal is more often heard than seen?"></TextView>
+
+            <Button
+                android:id="@+id/animals_1_a"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@+id/category_animals_1"
+                android:layout_alignStart="@+id/category_animals_1"
+                android:layout_centerVertical="true"
+                android:onClick="evaluateOption"
+                android:text="Ladybird" />
+
+            <Button
+                android:id="@+id/animals_1_b"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignBottom="@+id/animals_1_a"
+                android:layout_alignRight="@+id/category_animals_1"
+                android:layout_centerVertical="true"
+                android:onClick="evaluateOption"
+                android:text="Ant" />
+
+            <Button
+                android:id="@+id/animals_1_c"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+
+                android:layout_alignLeft="@+id/animals_1_a"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/animals_1_a"
+                android:onClick="evaluateOption"
+                android:text="Cricket" />
+
+            <Button
+                android:id="@+id/animals_1_d"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@+id/animals_1_b"
+                android:layout_alignStart="@+id/animals_1_b"
+                android:layout_below="@+id/animals_1_b"
+                android:layout_marginTop="55dp"
+                android:onClick="evaluateOption"
+                android:text="Cockroach" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/category_animals_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:text="2. Which of the following reptiles have the ability to change the color of their skin?"></TextView>
+
+            <Button
+                android:id="@+id/animals_2_a"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@+id/category_animals_2"
+                android:layout_alignStart="@+id/category_animals_2"
+                android:layout_centerVertical="true"
+                android:onClick="evaluateOption"
+                android:text="Lizard" />
+
+            <Button
+                android:id="@+id/animals_2_b"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignBottom="@+id/animals_2_a"
+                android:layout_alignRight="@+id/category_animals_2"
+                android:layout_centerVertical="true"
+                android:onClick="evaluateOption"
+                android:text="Chameleon" />
+
+            <Button
+                android:id="@+id/animals_2_c"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@+id/animals_2_a"
+                android:layout_alignStart="@+id/animals_2_a"
+                android:layout_below="@+id/category_animals_2"
+                android:layout_marginTop="30dp"
+                android:onClick="evaluateOption"
+                android:text="Crocodile" />
+
+            <Button
+                android:id="@+id/animals_2_d"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@+id/animals_2_b"
+                android:layout_alignStart="@+id/animals_2_b"
+                android:layout_below="@+id/animals_2_b"
+                android:layout_marginTop="55dp"
+                android:onClick="evaluateOption"
+                android:text="Worm" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Science" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/category_science_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:text="3. What company produces the iPod?"></TextView>
+
+            <Button
+                android:id="@+id/science_1_a"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@+id/category_science_1"
+                android:layout_alignStart="@+id/category_science_1"
+                android:layout_centerVertical="true"
+                android:onClick="evaluateOption"
+                android:text="Toshiba" />
+
+            <Button
+                android:id="@+id/science_1_b"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignBottom="@+id/science_1_a"
+                android:layout_alignRight="@+id/category_science_1"
+                android:layout_centerVertical="true"
+                android:onClick="evaluateOption"
+                android:text="Nintendo" />
+
+            <Button
+                android:id="@+id/science_1_c"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@+id/science_1_a"
+                android:layout_alignStart="@+id/science_1_a"
+                android:layout_below="@+id/category_science_1"
+                android:layout_marginTop="50dp"
+                android:onClick="evaluateOption"
+                android:text="Sony" />
+
+            <Button
+                android:id="@+id/science_1_d"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@+id/science_1_b"
+                android:layout_alignStart="@+id/science_1_b"
+                android:layout_below="@+id/science_1_b"
+                android:layout_marginTop="55dp"
+                android:onClick="evaluateOption"
+                android:text="Apple" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/category_science_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:text="4. What do you call two straight lines that will never cross, even if you extend them to infinitely?"></TextView>
+
+            <Button
+                android:id="@+id/science_2_a"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@+id/category_science_2"
+                android:layout_alignStart="@+id/category_science_2"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="150dp"
+                android:onClick="evaluateOption"
+                android:text="Parallel" />
+
+            <Button
+                android:id="@+id/science_2_b"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignBottom="@+id/science_2_a"
+                android:layout_alignRight="@+id/category_science_2"
+                android:layout_centerVertical="true"
+                android:onClick="evaluateOption"
+                android:text="Tangent" />
+
+            <Button
+                android:id="@+id/science_2_c"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@+id/science_2_a"
+                android:layout_alignStart="@+id/science_2_a"
+                android:layout_below="@+id/category_science_2"
+                android:layout_marginTop="30dp"
+                android:onClick="evaluateOption"
+                android:text="Shy" />
+
+            <Button
+                android:id="@+id/science_2_d"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@+id/science_2_b"
+                android:layout_alignStart="@+id/science_2_b"
+                android:layout_alignTop="@+id/science_2_c"
+                android:onClick="evaluateOption"
+                android:text="Perpendicular"
+                android:textSize="10sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Technology" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/category_technology_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:text="5.What are punctuation marks and letters used to make expressive shapes in emails and text messages known as?"></TextView>
+
+            <Button
+                android:id="@+id/technology_1_a"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="100dp"
+                android:layout_alignLeft="@+id/category_technology_1"
+                android:layout_alignStart="@+id/category_technology_1"
+                android:layout_centerVertical="true"
+                android:onClick="evaluateOption"
+                android:text="SMS" />
+
+            <Button
+                android:id="@+id/technology_1_b"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignBottom="@+id/technology_1_a"
+                android:layout_alignRight="@+id/category_technology_1"
+                android:layout_centerVertical="true"
+                android:onClick="evaluateOption"
+                android:text="Quasitop" />
+
+            <Button
+                android:id="@+id/technology_1_c"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@+id/technology_1_a"
+                android:layout_alignStart="@+id/technology_1_a"
+                android:layout_below="@+id/technology_1_a"
+                android:onClick="evaluateOption"
+                android:text="Emoticons" />
+
+            <Button
+                android:id="@+id/technology_1_d"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:onClick="evaluateOption"
+                android:text="Interrbong"
+                android:layout_alignBottom="@+id/technology_1_c"
+                android:layout_alignLeft="@+id/technology_1_b"
+                android:layout_alignStart="@+id/technology_1_b"
+                android:layout_marginBottom="10dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/category_technology_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:text="6. What does the Dell company make?"></TextView>
+
+            <Button
+                android:id="@+id/technology_2_a"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@+id/category_technology_2"
+                android:layout_alignStart="@+id/category_technology_2"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="50dp"
+                android:onClick="evaluateOption"
+                android:text="Cars" />
+
+            <Button
+                android:id="@+id/technology_2_b"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignBottom="@+id/technology_2_a"
+                android:layout_alignRight="@+id/category_technology_2"
+                android:layout_centerVertical="true"
+                android:onClick="evaluateOption"
+                android:text="Bikes" />
+
+            <Button
+                android:id="@+id/technology_2_c"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@+id/technology_2_a"
+                android:layout_alignStart="@+id/technology_2_a"
+                android:layout_below="@+id/category_technology_2"
+                android:layout_marginTop="30dp"
+                android:onClick="evaluateOption"
+                android:text="Drinks" />
+
+            <Button
+                android:id="@+id/technology_2_d"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@+id/technology_2_b"
+                android:layout_alignStart="@+id/technology_2_b"
+                android:layout_alignTop="@+id/technology_2_c"
+                android:onClick="evaluateOption"
+                android:text="Computer" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="General Knowledge" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/category_gk_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:text="7.What falling object is said to have inspired Isaac Newton's theory of gravity?"></TextView>
+
+            <Button
+                android:id="@+id/gk_1_a"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="60dp"
+                android:layout_alignLeft="@+id/category_gk_1"
+                android:layout_alignStart="@+id/category_gk_1"
+                android:layout_centerVertical="true"
+                android:onClick="evaluateOption"
+                android:text="Apple" />
+
+            <Button
+                android:id="@+id/gk_1_b"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignBottom="@+id/gk_1_a"
+                android:layout_alignRight="@+id/category_gk_1"
+                android:layout_centerVertical="true"
+                android:onClick="evaluateOption"
+                android:text="Plum" />
+
+            <Button
+                android:id="@+id/gk_1_c"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:onClick="evaluateOption"
+                android:text="Orange"
+                android:layout_below="@+id/gk_1_a"
+                android:layout_alignLeft="@+id/gk_1_a"
+                android:layout_alignStart="@+id/gk_1_a" />
+
+            <Button
+                android:id="@+id/gk_1_d"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@+id/gk_1_b"
+                android:layout_alignStart="@+id/gk_1_b"
+                android:layout_below="@+id/gk_1_b"
+                android:onClick="evaluateOption"
+                android:text="Pineapple" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/category_gk_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:text="8. What does e of email stands for?"></TextView>
+
+            <Button
+                android:id="@+id/gk_2_a"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@+id/category_gk_2"
+                android:layout_alignStart="@+id/category_gk_2"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="50dp"
+                android:onClick="evaluateOption"
+                android:text="Efficient" />
+
+            <Button
+                android:id="@+id/gk_2_b"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignBottom="@+id/gk_2_a"
+                android:layout_alignRight="@+id/category_gk_2"
+                android:layout_centerVertical="true"
+                android:onClick="evaluateOption"
+                android:text="Empty" />
+
+            <Button
+                android:id="@+id/gk_2_c"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@+id/gk_2_a"
+                android:layout_alignStart="@+id/gk_2_a"
+                android:layout_below="@+id/category_gk_2"
+                android:layout_marginTop="30dp"
+                android:onClick="evaluateOption"
+                android:text="Electronic" />
+
+            <Button
+                android:id="@+id/gk_2_d"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@+id/gk_2_b"
+                android:layout_alignStart="@+id/gk_2_b"
+                android:layout_alignTop="@+id/gk_2_c"
+                android:onClick="evaluateOption"
+                android:text="Easy" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sports" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/category_sports_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:text="9. In which sports do athelete thwow a spear-like object?"></TextView>
+
+            <Button
+                android:id="@+id/sports_1_a"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="60dp"
+                android:layout_alignLeft="@+id/category_sports_1"
+                android:layout_alignStart="@+id/category_sports_1"
+                android:layout_centerVertical="true"
+                android:onClick="evaluateOption"
+                android:text="Shotput" />
+
+            <Button
+                android:id="@+id/sports_1_b"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignBottom="@+id/sports_1_a"
+                android:layout_alignRight="@+id/category_sports_1"
+                android:layout_centerVertical="true"
+                android:onClick="evaluateOption"
+                android:text="Hammer" />
+
+            <Button
+                android:id="@+id/sports_1_c"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:onClick="evaluateOption"
+                android:text="Discuss"
+                android:layout_below="@+id/sports_1_a"
+                android:layout_alignLeft="@+id/sports_1_a"
+                android:layout_alignStart="@+id/sports_1_a" />
+
+            <Button
+                android:id="@+id/sports_1_d"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@+id/sports_1_b"
+                android:layout_alignStart="@+id/sports_1_b"
+                android:layout_below="@+id/sports_1_b"
+                android:onClick="evaluateOption"
+                android:text="Javelin" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/category_sports_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:text="10. What D-word means bouncing a basketball as you move around in the court?"></TextView>
+
+            <Button
+                android:id="@+id/sports_2_a"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@+id/category_sports_2"
+                android:layout_alignStart="@+id/category_sports_2"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="50dp"
+                android:onClick="evaluateOption"
+                android:text="Dribbling" />
+
+            <Button
+                android:id="@+id/sports_2_b"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignBottom="@+id/sports_2_a"
+                android:layout_alignRight="@+id/category_sports_2"
+                android:layout_centerVertical="true"
+                android:onClick="evaluateOption"
+                android:text="Delving" />
+
+            <Button
+                android:id="@+id/sports_2_c"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@+id/sports_2_a"
+                android:layout_alignStart="@+id/sports_2_a"
+                android:layout_below="@+id/category_sports_2"
+                android:layout_marginTop="30dp"
+                android:onClick="evaluateOption"
+                android:text="Drilling" />
+
+            <Button
+                android:id="@+id/sports_2_d"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@+id/sports_2_b"
+                android:layout_alignStart="@+id/sports_2_b"
+                android:layout_alignTop="@+id/sports_2_c"
+                android:onClick="evaluateOption"
+                android:text="Dunking" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/score_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:text="Score"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/score"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="20sp"
+                android:layout_margin="20dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

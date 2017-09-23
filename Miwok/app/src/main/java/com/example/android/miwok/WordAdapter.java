@@ -1,9 +1,11 @@
 package com.example.android.miwok;
 
 import android.app.Activity;
+import android.media.MediaPlayer;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,6 +37,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         // Check if the existing view is being reused, otherwise inflate the view
         View listItemView = convertView;
+
         if(listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.list_item, parent, false);
@@ -42,6 +45,8 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
         // Get the {@link AndroidFlavor} object located at this position in the list
         Word currentWord = getItem(position);
+
+        Log.v("NumbersActivity","current word: " + currentWord);
 
         // Find the TextView in the list_item.xml layout with the ID version_name
         LinearLayout textView = (LinearLayout) listItemView.findViewById(R.id.text_view);
@@ -74,6 +79,18 @@ public class WordAdapter extends ArrayAdapter<Word> {
         else{
             iconView.setVisibility(View.GONE);
         }
+
+        // Find the TextView in the list_item.xml layout with the ID version_number
+        ImageView playView = (ImageView) listItemView.findViewById(R.id.play);
+        // Get the version number from the current AndroidFlavor object and
+        // set this text on the number TextView
+        final MediaPlayer mp = MediaPlayer.create(getContext(), currentWord.getAudioResourceId());
+
+        playView.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                mp.start();
+            }
+        });
 
         // Return the whole list item layout (containing 2 TextViews and an ImageView)
         // so that it can be shown in the ListView

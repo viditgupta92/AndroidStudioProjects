@@ -21,4 +21,18 @@
         android:layout_width="wrap_content"
         android:text="Pause">
     </Button>
+
+    <Button
+        android:id="@+id/volume_up"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="+">
+    </Button>
+
+    <Button
+        android:id="@+id/volume_down"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="-">
+    </Button>
 </LinearLayout>

@@ -1,5 +1,7 @@
 package com.example.android.miwok;
 
+import android.content.Context;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +15,8 @@ public class PhrasesActivity extends AppCompatActivity {
 
     private MediaPlayer mp;
 
+    private AudioManager am;
+
     private MediaPlayer.OnCompletionListener mCompletionListener = new MediaPlayer.OnCompletionListener() {
         @Override
         public void onCompletion(MediaPlayer mediaPlayer) {
@@ -20,10 +24,30 @@ public class PhrasesActivity extends AppCompatActivity {
         }
     };
 
+    private AudioManager.OnAudioFocusChangeListener  mFocusChangeListener = new AudioManager.OnAudioFocusChangeListener(){
+        @Override
+        public void onAudioFocusChange(int focusChange) {
+            if(focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT ||
+                    focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK){
+                mp.pause();
+                mp.seekTo(0);
+            }
+            else if(focusChange == AudioManager.AUDIOFOCUS_GAIN){
+                mp.start();
+            }
+            else if(focusChange == AudioManager.AUDIOFOCUS_LOSS){
+                mp.stop();
+                releaseMediaPlayer();
+            }
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
+
+        am = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
         final ArrayList<Word> words = new ArrayList<Word>();
         words.add(new Word("Where are you going?","minto wuksus", R.raw.phrase_where_are_you_going));
@@ -50,11 +74,16 @@ public class PhrasesActivity extends AppCompatActivity {
 
                 releaseMediaPlayer();
 
-                mp = MediaPlayer.create(PhrasesActivity.this, word.getAudioResourceId());
+                int result = am.requestAudioFocus(mFocusChangeListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
 
-                mp.start();
+                if(result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED){
 
-                mp.setOnCompletionListener(mCompletionListener);
+                    mp = MediaPlayer.create(PhrasesActivity.this, word.getAudioResourceId());
+
+                    mp.start();
+
+                    mp.setOnCompletionListener(mCompletionListener);
+                }
             }
         });
     }
@@ -73,6 +102,8 @@ public class PhrasesActivity extends AppCompatActivity {
             // setting the media player to null is an easy way to tell that the media player
             // is not configured to play an audio file at the moment.
             mp = null;
+
+            am.abandonAudioFocus(mFocusChangeListener);
         }
     }
 

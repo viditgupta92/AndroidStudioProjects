@@ -51,4 +51,11 @@
         <item name="android:textSize">18sp</item>
         <item name="android:textAppearance">?android:textAppearanceMedium</item>
     </style>
+
+    <style name="TabStyle" parent="Widget.Design.TabLayout">
+        <item name="tabTextColor">#A8A19E</item>
+        <item name="android:background">#4A312A</item>
+        <item name="tabIndicatorColor">#FFFFFF</item>
+        <item name="tabMode">fixed</item>
+    </style>
 </resources>

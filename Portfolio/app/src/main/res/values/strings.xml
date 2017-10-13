@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Portfolio</string>
+
+    <!-- Category name for about[CHAR LIMIT=20] -->
+    <string name="category_about">About</string>
+
+    <!-- Category name for education [CHAR LIMIT=20] -->
+    <string name="category_education">Education</string>
+
+    <!-- Category name for skills [CHAR LIMIT=20] -->
+    <string name="category_skills">Skills</string>
+
+    <!-- Category name for worl experience [CHAR LIMIT=20] -->
+    <string name="category_workexp">Work Exp</string>
+
+    <!-- Category name for projects [CHAR LIMIT=20] -->
+    <string name="category_projects">Projects</string>
+
+    <!-- Category name for achievements [CHAR LIMIT=20] -->
+    <string name="category_achievements">Achievements</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

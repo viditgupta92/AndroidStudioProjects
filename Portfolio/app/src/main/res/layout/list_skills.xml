@@ -8,11 +8,6 @@
     android:minHeight="@dimen/list_skill_height">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/heading"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,7 +19,7 @@
             android:id="@+id/title_text_view"
             android:layout_width="@dimen/list_image_width"
             android:layout_height="@dimen/list_skill_height"
-            style="@style/ListStyle_Skills"
+            style="@style/ListStyle_Skills_1"
             android:background="@color/tan_background" />
 
         <TextView
@@ -32,7 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/list_skill_height"
             android:background="@color/category_about"
-            style="@style/ListStyle_Skills"
+            style="@style/ListStyle_Skills_2"
             tools:text="one" />
 
     </LinearLayout>

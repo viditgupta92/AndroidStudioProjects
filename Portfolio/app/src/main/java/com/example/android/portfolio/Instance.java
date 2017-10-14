@@ -8,36 +8,49 @@ public class Instance {
 
     String heading;
     Integer imageResourceId = NO_IMAGE;
+    String location;
     String title;
     String subTitle;
+    String position;
+    String duration;
+    String languages;
     String description;
 
     public static final Integer NO_IMAGE = -1;
 
-    public Instance(Integer eImageResourceId, String eHeading,  String eTitle)
+    public Instance(Integer eImageResourceId,  String eTitle)
     {
         imageResourceId = eImageResourceId;
-        heading = eHeading;
         title = eTitle;
     }
 
-    public Instance(String eHeading, String eTitle, String eDescription){
-        heading = eHeading;
+    public Instance(String eTitle, String eDescription){
         title = eTitle;
         description = eDescription;
     }
 
-    public Instance(Integer eImageResourceId, String eHeading, String eTitle, String eSubTitle, String eDescription){
+    public Instance(Integer eImageResourceId, String eTitle, String eSubTitle, String eDescription){
         imageResourceId = eImageResourceId;
-        heading = eHeading;
         title = eTitle;
         subTitle = eSubTitle;
         description = eDescription;
     }
 
-    public String getHeading()
-    {
-        return heading;
+    public Instance(Integer eImageResourceId, String eTitle, String eLocation, String ePosition, String eDuration, String eDescription){
+        imageResourceId = eImageResourceId;
+        location = eLocation;
+        title = eTitle;
+        position = ePosition;
+        duration = eDuration;
+        description = eDescription;
+    }
+
+    public Instance(String eTitle, String eLanguages, String eLocation, String eDuration, String eDescription){
+        title = eTitle;
+        languages = eLanguages;
+        location = eLocation;
+        duration = eDuration;
+        description = eDescription;
     }
 
     public String getTitle()
@@ -48,6 +61,26 @@ public class Instance {
     public String getSubTitle()
     {
         return subTitle;
+    }
+
+    public String getPosition()
+    {
+        return position;
+    }
+
+    public String getDuration()
+    {
+        return duration;
+    }
+
+    public String getLocation()
+    {
+        return location;
+    }
+
+    public String getLanguages()
+    {
+        return languages;
     }
 
     public String getDescription() { return description; }

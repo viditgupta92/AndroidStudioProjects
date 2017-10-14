@@ -45,12 +45,6 @@ public class SkillsAdapter extends ArrayAdapter<Instance> {
         Log.v("Fragment","current instance: " + currentInstance);
 
         // Find the TextView in the list_educationation.xml layout with the ID version_name
-        TextView headingTextView = (TextView) listItemView.findViewById(R.id.heading);
-        // Get the version name from the current AndroidFlavor object and
-        // set this text on the name TextView
-        headingTextView.setText(currentInstance.getHeading());
-
-        // Find the TextView in the list_educationation.xml layout with the ID version_name
         TextView titleTextView = (TextView) listItemView.findViewById(R.id.title_text_view);
         // Get the version name from the current AndroidFlavor object and
         // set this text on the name TextView

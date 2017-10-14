@@ -8,11 +8,6 @@
     android:minHeight="@dimen/list_item_height">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/heading"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello"/>
 
     <LinearLayout
         android:layout_width="match_parent"

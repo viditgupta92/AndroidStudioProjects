@@ -20,8 +20,8 @@ public class EducationFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.instance_list, container, false);
 
         final ArrayList<Instance> instances = new ArrayList<Instance>();
-        instances.add(new Instance(R.drawable.neu_logo, "Education","Northeastern University","Masters in Computer Science","Courses: Algorithms, Web Development, Information Retrieval, Programming Design Paradigms"));
-        instances.add(new Instance(R.drawable.vit_logo,  "Education", "Vellore Institute of Technology","Bachelors in Electronics and Communication Engineering","Courses: Algorithms, Web Development, Information Retrieval, Programming Design Paradigms"));
+        instances.add(new Instance(R.drawable.neu_logo, "Northeastern University","Masters in Computer Science","Courses: Algorithms, Web Development, Information Retrieval, Programming Design Paradigms"));
+        instances.add(new Instance(R.drawable.vit_logo,  "Vellore Institute of Technology","Bachelors in Electronics and Communication Engineering","Courses: Algorithms, Web Development, Information Retrieval, Programming Design Paradigms"));
 
         EducationAdapter adapter = new EducationAdapter(getActivity(),instances,R.color.category_education);
 

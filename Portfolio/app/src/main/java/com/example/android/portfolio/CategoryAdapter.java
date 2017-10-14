@@ -40,8 +40,7 @@ public class CategoryAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         if (position == 0) {
             return new AboutFragment();
-        }
-        else if (position == 1){
+        } else if (position == 1){
             return new EducationFragment();
         } else if (position == 2) {
             return new SkillsFragment();

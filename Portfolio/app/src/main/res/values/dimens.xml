@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="list_item_height">88dp</dimen>
+    <dimen name="list_image_width">128dp</dimen>
+    <dimen name="list_item_height">220dp</dimen>
+    <dimen name="list_skill_height">60dp</dimen>
 </resources>

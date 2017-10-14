@@ -52,9 +52,35 @@
             android:layout_height="wrap_content"
             android:text="Social Media" />
 
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
 
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/linkedin_logo"
+                android:onClick="http://www.linkedin.com/in/viditgupta92"/>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/github_logo"
+                android:onClick="http://www.github.com/viditgupta92"/>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/fb_logo"
+                android:onClick="https://www.facebook.com/vidit92.gupta"/>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/website_logo"
+                android:onClick="http://gupta-vidit-webdev.herokuapp.com"/>
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>

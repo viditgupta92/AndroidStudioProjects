@@ -53,6 +53,10 @@ public class Instance {
         description = eDescription;
     }
 
+    public Instance(String eDescription){
+        description = eDescription;
+    }
+
     public String getTitle()
     {
         return title;

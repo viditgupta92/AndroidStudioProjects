@@ -5,4 +5,5 @@
     <dimen name="list_skill_height">80dp</dimen>
     <dimen name="list_workexp_image_width">100dp</dimen>
     <dimen name="list_workexp_height">320dp</dimen>
+    <dimen name="list_achievements_height">120dp</dimen>
 </resources>

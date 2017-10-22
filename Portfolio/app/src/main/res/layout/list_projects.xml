@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:minHeight="@dimen/list_item_height"
     android:orientation="horizontal"
-    android:paddingTop="20dp">
+    android:paddingTop="10dp">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -42,18 +42,18 @@
 
             <TextView
                 android:id="@+id/location_text_view"
-                style="@style/ListStyle_Skills_2"
+                style="@style/ListStyle_Education_3"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/list_skill_height"
-                android:layout_gravity="start"
+                android:gravity="left"
                 tools:text="one" />
 
             <TextView
                 android:id="@+id/duration_text_view"
-                style="@style/ListStyle_Skills_2"
+                style="@style/ListStyle_Education_3"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/list_skill_height"
-                android:layout_gravity="end"
+                android:gravity="right"
                 tools:text="one" />
         </LinearLayout>
 

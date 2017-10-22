@@ -21,7 +21,7 @@ public class EducationFragment extends Fragment {
 
         final ArrayList<Instance> instances = new ArrayList<Instance>();
         instances.add(new Instance(R.drawable.neu_logo, "Northeastern University","Masters in Computer Science","Courses: Algorithms, Web Development, Information Retrieval, Programming Design Paradigms"));
-        instances.add(new Instance(R.drawable.vit_logo,  "Vellore Institute of Technology","Bachelors in Electronics and Communication Engineering","Courses: Algorithms, Web Development, Information Retrieval, Programming Design Paradigms"));
+        instances.add(new Instance(R.drawable.vit_logo,  "Vellore Institute of Technology","Bachelors in Electronics and Communication Engineering","Courses: Data Structures & Algorithms, Computer Organization & Architecture, Wireless & Mobile Communication"));
 
         EducationAdapter adapter = new EducationAdapter(getActivity(),instances,R.color.category_education);
 

@@ -34,13 +34,13 @@
                 android:orientation="horizontal">
                 <TextView
                     android:id="@+id/title_text_view"
-                    android:layout_gravity="start"
+                    android:gravity="left"
                     style="@style/ListStyle_Education_1"
                     tools:text="title" />
 
                 <TextView
                     android:id="@+id/location_text_view"
-                    android:layout_gravity="end"
+                    android:gravity="right"
                     style="@style/ListStyle_Education_1"
                     tools:text="location" />
             </LinearLayout>
@@ -54,15 +54,15 @@
                     android:id="@+id/position_text_view"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="start"
-                    style="@style/ListStyle_Education_2"
+                    android:gravity="left"
+                    style="@style/ListStyle_Education_3"
                     tools:text="one" />
                 <TextView
                     android:id="@+id/duration_text_view"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    style="@style/ListStyle_Education_2"
+                    android:gravity="right"
+                    style="@style/ListStyle_Education_3"
                     tools:text="one" />
             </LinearLayout>
 

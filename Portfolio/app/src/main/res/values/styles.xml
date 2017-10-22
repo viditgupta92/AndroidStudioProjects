@@ -53,6 +53,8 @@
     <style name="about">
         <item name="android:textSize">15dp</item>
         <item name="android:gravity">center</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">italic</item>
         <item name="android:text">I am Vidit Gupta. Here\'s a little bit about me.
             I am a passionate, determined, hardworking individual with lots of optimism.
             I am currently pursuing my Masters in Computer Science from Northeastern University.

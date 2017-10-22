@@ -49,4 +49,27 @@
         <item name="android:textSize">14sp</item>
         <item name="android:textAppearance">?android:textAppearanceMedium</item>
     </style>
+
+    <style name="about">
+        <item name="android:textSize">15dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:text">I am Vidit Gupta. Here\'s a little bit about me.
+            I am a passionate, determined, hardworking individual with lots of optimism.
+            I am currently pursuing my Masters in Computer Science from Northeastern University.
+            I possess 2.5 years experience of working as a software engineer in semiconductor industry.
+            I also hold a Bachelors degree in Electronics and Communication.</item>
+    </style>
+
+    <style name="TabStyle" parent="TextAppearance.Design.Tab">
+        <item name="tabTextColor">#A8A19E</item>
+        <item name="android:background">#4A312A</item>
+        <item name="android:textSize">10dip</item>
+        <item name="tabIndicatorColor">#FFFFFF</item>
+        <item name="tabGravity">fill</item>
+        <item name="tabMode">scrollable</item>
+    </style>
+
+    <style name="TabTheme" parent="@style/AppTheme">
+        <item name="android:singleLine">true</item>
+    </style>
 </resources>
